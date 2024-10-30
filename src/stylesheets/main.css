@@ -75,14 +75,16 @@ body.index {
     width: 100%;
 
     .container {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 5rem;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5rem 1rem;
       padding: 0 2rem;
 
-      .img-container {
-        width: 48%;
+      .videoCard {
+        width: 49%;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -94,9 +96,9 @@ body.index {
           object-fit: cover;
           transform: scale(1);
           transition: all 0.3s ease-in-out;
-          /* &:hover {
+          &:hover {
             transform: scale(1.02);
-          } */
+          }
         }
 
         .author {
@@ -126,6 +128,7 @@ body.index {
             width: 2rem;
 
             &.long {
+              transition: all 0.4s ease-in;
               width: 4rem;
             }
 
@@ -170,10 +173,11 @@ body.index {
   @media screen and (max-width: 1023px) {
     .gallery {
       .container {
+        flex-direction: column;
         align-items: center;
         padding: 1rem;
 
-        .img-container {
+        .videoCard {
           width: 100%;
         }
       }

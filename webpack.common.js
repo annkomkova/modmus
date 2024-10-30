@@ -9,7 +9,8 @@ const path = require('path')
 module.exports = {
   entry: {
     index: './src/index.js',
-    poster: './src/poster.js'
+    poster: './src/poster.js',
+    cursor: './src/cursor.js'
   },
   output: {
     filename: '[name].js',
@@ -78,62 +79,62 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['index']
+      chunks: ['index', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/izbushka-na-kurih-nozhkah.html',
       filename: './izbushka-na-kurih-nozhkah.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/katakomby.html',
       filename: './katakomby.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/limozh-rynok.html',
       filename: './limozh-rynok.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/skot.html',
       filename: './skot.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
-      template: './src/staryj-zamok-1.html',
-      filename: './staryj-zamok-1.html',
-      chunks: ['poster']
+      template: './src/staryj-zamok.html',
+      filename: './staryj-zamok.html',
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/staryj-zamok-2.html',
       filename: './staryj-zamok-2.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/tyuilrijskij-sad.html',
       filename: './tyuilrijskij-sad.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/balet-nevylupivshihsya-ptencov.html',
       filename: './balet-nevylupivshihsya-ptencov.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/bogatyrskie-vorota.html',
       filename: './bogatyrskie-vorota.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/dva-evreya-bogatyj-i-bednyj.html',
       filename: './dva-evreya-bogatyj-i-bednyj.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
       template: './src/gnom.html',
       filename: './gnom.html',
-      chunks: ['poster']
+      chunks: ['poster', 'cursor']
     }),
 
     //Partials
@@ -141,6 +142,12 @@ module.exports = {
       {
         path: path.join(__dirname, './src/partials/header.html'),
         location: 'header',
+        template_filename: '*',
+        priority: 'replace'
+      },
+      {
+        path: path.join(__dirname, './src/partials/favicon.html'),
+        location: 'favicon',
         template_filename: '*',
         priority: 'replace'
       }
