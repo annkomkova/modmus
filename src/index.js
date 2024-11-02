@@ -10,11 +10,9 @@ function videoOnHover() {
   const videoList = document.querySelectorAll('picture img')
   videoList.forEach((video) => {
     video.addEventListener('mouseover', () => {
-      video.classList.add('hover')
       cursor.classList.add('hover')
     })
     video.addEventListener('mouseout', () => {
-      video.classList.remove('hover')
       cursor.classList.remove('hover')
     })
   })
