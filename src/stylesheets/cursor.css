@@ -24,6 +24,10 @@
 *:hover {
   cursor: none;
 }
+audio,
+audio:hover {
+  cursor: pointer;
+}
 /* body {
   cursor: url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Circle_%28transparent%29.svg');
   width: 12px;

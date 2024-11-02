@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const cursor = document.querySelector('.cursor')
 function videoOnHover() {
-  const videoList = document.querySelectorAll('video')
+  const videoList = document.querySelectorAll('picture img')
   videoList.forEach((video) => {
     video.addEventListener('mouseover', () => {
-      video.pause()
+      video.classList.add('hover')
       cursor.classList.add('hover')
     })
     video.addEventListener('mouseout', () => {
-      video.play()
+      video.classList.remove('hover')
       cursor.classList.remove('hover')
     })
   })

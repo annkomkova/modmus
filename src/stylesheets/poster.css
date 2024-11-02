@@ -54,21 +54,155 @@ body.poster {
         width: 30%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         text-transform: uppercase;
         font-size: 1rem;
         color: var(--muteWhite);
+        gap: 2rem;
+      }
+    }
+
+    .audio-player {
+      --player-button-width: 3em;
+      --sound-button-width: 2em;
+      --space: 0.5em;
+      width: 15rem;
+      height: 4rem;
+
+      .controls {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .sound-button {
+        background-color: transparent;
+        border: 0;
+        width: var(--sound-button-width);
+        height: var(--sound-button-width);
+        cursor: pointer;
+        padding: 0;
+
+        svg {
+          fill: var(--muteWhite);
+        }
+      }
+
+      .player-button {
+        background-color: transparent;
+        border: 0;
+        width: var(--player-button-width);
+        height: var(--player-button-width);
+        cursor: pointer;
+        padding: 0;
+
+        svg {
+          fill: var(--muteWhite);
+        }
+      }
+
+      .timeline {
+        -webkit-appearance: none;
+        width: calc(
+          100% -
+            (
+              var(--player-button-width) + var(--sound-button-width) +
+                var(--space)
+            )
+        );
+        height: 0.5em;
+        background-color: #e5e5e5;
+        border-radius: 5px;
+        background-size: 0% 100%;
+        background-image: linear-gradient(#d2ccbc, #d2ccbc);
+        background-repeat: no-repeat;
+        margin-right: var(--space);
+      }
+      .timeline::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.1s;
+        background-color: #a94672;
+      }
+
+      .timeline::-moz-range-thumb {
+        -webkit-appearance: none;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.1s;
+        background-color: #a94672;
+      }
+
+      .timeline::-ms-thumb {
+        -webkit-appearance: none;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.1s;
+        background-color: #a94672;
+      }
+
+      .timeline::-webkit-slider-thumb:hover {
+        background-color: #943f65;
+      }
+
+      .timeline:hover::-webkit-slider-thumb {
+        opacity: 1;
+      }
+
+      .timeline::-moz-range-thumb:hover {
+        background-color: #943f65;
+      }
+
+      .timeline:hover::-moz-range-thumb {
+        opacity: 1;
+      }
+
+      .timeline::-ms-thumb:hover {
+        background-color: #943f65;
+      }
+
+      .timeline:hover::-ms-thumb {
+        opacity: 1;
+      }
+
+      .timeline::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+      }
+
+      .timeline::-moz-range-track {
+        -webkit-appearance: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+      }
+
+      .timeline::-ms-track {
+        -webkit-appearance: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
       }
     }
 
     .video,
-    video {
+    img {
       width: 100%;
       height: 100%;
-    }
-
-    .video {
-      margin-top: 6rem;
     }
   }
   @media screen and (max-width: 779px) {
@@ -78,8 +212,6 @@ body.poster {
       h1 {
         font-size: 2rem;
         line-height: 2.1rem;
-        font-weight: 700;
-        border-bottom: 1px solid var(--gray);
         padding-bottom: 2rem;
       }
 
@@ -89,21 +221,12 @@ body.poster {
 
         .infoText {
           width: 100%;
+          font-size: 1.2rem;
         }
         .infoAuthor {
           width: 100%;
           flex-direction: row;
         }
-      }
-
-      .video,
-      video {
-        width: 100%;
-        height: 100%;
-      }
-
-      .video {
-        margin-top: 6rem;
       }
     }
   }

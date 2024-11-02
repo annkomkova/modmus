@@ -107,11 +107,6 @@ module.exports = {
       chunks: ['poster', 'cursor']
     }),
     new HtmlWebpackPlugin({
-      template: './src/staryj-zamok-2.html',
-      filename: './staryj-zamok-2.html',
-      chunks: ['poster', 'cursor']
-    }),
-    new HtmlWebpackPlugin({
       template: './src/tyuilrijskij-sad.html',
       filename: './tyuilrijskij-sad.html',
       chunks: ['poster', 'cursor']
