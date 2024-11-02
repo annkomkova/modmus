@@ -1,4 +1,4 @@
-import './stylesheets/cursor.scss'
+import './stylesheets/cursor.css'
 
 function mouseMoveCursor() {
   const cursor = document.querySelector('.cursor')
