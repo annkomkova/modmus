@@ -9,6 +9,12 @@ function mouseMoveCursor() {
     cursor.style.left = "".concat(x, "px");
     cursor.style.top = "".concat(y, "px");
   });
+  window.addEventListener('click', function (e) {
+    cursor.classList.add('active');
+    setTimeout(function () {
+      return cursor.classList.remove('active');
+    }, 300);
+  });
 }
 document.addEventListener('DOMContentLoaded', function () {
   mouseMoveCursor();
