@@ -10,11 +10,9 @@ function videoOnHover() {
   var videoList = document.querySelectorAll('picture img');
   videoList.forEach(function (video) {
     video.addEventListener('mouseover', function () {
-      video.classList.add('hover');
       cursor.classList.add('hover');
     });
     video.addEventListener('mouseout', function () {
-      video.classList.remove('hover');
       cursor.classList.remove('hover');
     });
   });
