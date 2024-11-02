@@ -47,8 +47,6 @@ body.index {
       .bg-video {
         width: 50%;
         height: 100%;
-
-        z-index: -1;
         overflow: hidden;
       }
 
@@ -90,9 +88,9 @@ body.index {
         gap: 0.5rem;
         text-decoration: none;
 
-        img,
-        video {
+        img {
           width: 100%;
+          position: relative;
           object-fit: cover;
           transform: scale(1);
           transition: all 0.3s ease-in-out;
