@@ -1,12 +1,13 @@
-.main {
-  padding: 4rem 2rem 0;
-}
 .main h1 {
-  font-size: 6rem;
-  line-height: 6.2rem;
+  font-size: 5rem;
+  line-height: 5.2rem;
   font-weight: 700;
   border-bottom: 1px solid var(--gray);
-  padding-bottom: 2rem;
+}
+.info,
+.audio-player,
+h1 {
+  padding: 2rem;
 }
 .info {
   margin-top: 4rem;
@@ -32,8 +33,7 @@
   --player-button-width: 3em;
   --sound-button-width: 2em;
   --space: 0.5em;
-  width: 15rem;
-  height: 4rem;
+  width: 100%;
 }
 
 .controls {
@@ -41,7 +41,7 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
-  margin-top: 10px;
+  padding-top: 2rem;
 }
 
 .sound-button {
@@ -159,18 +159,19 @@ img {
 }
 
 @media screen and (max-width: 779px) {
-  .main {
-    padding: 2rem 1rem 2rem;
+  .controls {
+    padding: 0;
   }
-  h1 {
+  .main h1 {
     font-size: 2rem;
     line-height: 2.1rem;
-    padding-bottom: 2rem;
+    padding: 1rem 2rem 2rem;
   }
 
   .info {
     flex-direction: column-reverse;
     gap: 3rem;
+    margin: 0;
   }
   .infoText {
     width: 100%;

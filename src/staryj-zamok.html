@@ -10,7 +10,19 @@
     <div class="cursor"></div>
 
     <div class="main">
+      <div class="video">
+        <picture>
+          <source media="(max-width: 779px)" srcset="gif/vertical/zamok.gif" />
+          <source
+            media="(min-width: 780px)"
+            srcset="gif/horizontal/zamok.gif"
+          />
+          <img src="gif/horizontal/zamok.gif" />
+        </picture>
+      </div>
+
       <h1>Il vecchio castello (с итал. — «Старый замок»)</h1>
+
       <div class="info">
         <div class="infoText">
           Плакат в некотором роде является воссозданием утеряной картины старого
@@ -55,28 +67,7 @@
           </button>
         </div>
       </div>
-
-      <div class="video">
-        <picture>
-          <source media="(max-width: 779px)" srcset="gif/vertical/zamok.gif" />
-          <source
-            media="(min-width: 780px)"
-            srcset="gif/horizontal/zamok.gif"
-          />
-          <img src="gif/horizontal/zamok.gif" />
-        </picture>
-        <!-- <video
-          preload
-          muted
-          autoplay
-          loop
-          poster="images/horizontal/zamok.webp"
-        >
-          <source src="video/zamok_hor.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает встроенные видео :(
-        </video> -->
-      </div>
     </div>
-    <header></header>
+    <footer></footer>
   </body>
 </html>

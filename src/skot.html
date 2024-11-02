@@ -7,10 +7,19 @@
     <favicon></favicon>
   </head>
   <body class="poster">
+    <div class="video">
+      <picture>
+        <source media="(max-width: 779px)" srcset="gif/vertical/skot.gif" />
+        <source media="(min-width: 780px)" srcset="gif/horizontal/skot.gif" />
+        <img src="gif/horizontal/skot.gif" />
+      </picture>
+    </div>
+
     <div class="cursor"></div>
 
     <div class="main">
       <h1>Bydło (с пол. — «Скот»)</h1>
+
       <div class="info">
         <div class="infoText">
           "Плакат оформлен в виде упаковок в магазине. Эта метафора раскрывает
@@ -56,25 +65,7 @@
           </button>
         </div>
       </div>
-
-      <div class="video">
-        <picture>
-          <source media="(max-width: 779px)" srcset="gif/vertical/skot.gif" />
-          <source media="(min-width: 780px)" srcset="gif/horizontal/skot.gif" />
-          <img src="gif/horizontal/skot.gif" />
-        </picture>
-        <!-- <video
-          preload
-          muted
-          autoplay
-          loop
-          poster="images/horizontal/RGB_Bydlo_horizontal.webp"
-        >
-          <source src="video/skot_hor.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает встроенные видео :(
-        </video> -->
-      </div>
     </div>
-    <header></header>
+    <footer></footer>
   </body>
 </html>

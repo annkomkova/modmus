@@ -5,20 +5,29 @@
   mix-blend-mode: difference;
   border-radius: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: 100;
 }
 .cursor.hover {
   width: 18px;
   height: 18px;
-  transition: all ease-in 0.4s;
   background-color: rgba(255, 255, 255, 0.1);
 }
-.cursor:active {
-  background-color: rgba(255, 255, 255, 1);
+.cursor:active,
+.cursor.active {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 22px;
+  height: 22px;
 }
 *,
 *:hover {
   cursor: none;
+}
+@media screen and (max-device-width: 779px) {
+  .cursor {
+    display: none;
+  }
+  *,
+  *:hover {
+    cursor: default;
+  }
 }

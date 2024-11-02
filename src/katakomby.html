@@ -10,9 +10,24 @@
     <div class="cursor"></div>
 
     <div class="main">
+      <div class="video">
+        <picture>
+          <source
+            media="(max-width: 779px)"
+            srcset="gif/vertical/catacombs.gif"
+          />
+          <source
+            media="(min-width: 780px)"
+            srcset="gif/horizontal/catacombs.gif"
+          />
+          <img src="gif/horizontal/catacombs.gif" />
+        </picture>
+      </div>
+
       <h1>
         Catacombae. Sepulcrum romanum (с лат. — «Катакомбы. Римская гробница»)
       </h1>
+
       <div class="info">
         <div class="infoText">
           В основе плаката лежит контрастность звучания начала и конца
@@ -59,30 +74,7 @@
           </button>
         </div>
       </div>
-      <div class="video">
-        <picture>
-          <source
-            media="(max-width: 779px)"
-            srcset="gif/vertical/catacombs.gif"
-          />
-          <source
-            media="(min-width: 780px)"
-            srcset="gif/horizontal/catacombs.gif"
-          />
-          <img src="gif/horizontal/catacombs.gif" />
-        </picture>
-        <!-- <video
-          preload
-          muted
-          autoplay
-          loop
-          poster="images/horizontal/catacombae.webp"
-        >
-          <source src="video/catacombae_hor.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает встроенные видео :(
-        </video> -->
-      </div>
     </div>
-    <header></header>
+    <footer></footer>
   </body>
 </html>

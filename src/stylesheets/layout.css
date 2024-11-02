@@ -119,3 +119,11 @@ body {
     gap: 1rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .footerInfo_contacts_list > div p:nth-child(1) {
+    min-width: 180px;
+  }
+  .footerInfo_contacts_list > div p:nth-child(2) {
+    width: calc(100% - 180px);
+  }
+}

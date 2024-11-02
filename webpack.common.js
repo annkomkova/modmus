@@ -136,8 +136,8 @@ module.exports = {
     //Partials
     new HtmlWebpackPartialsPlugin([
       {
-        path: path.join(__dirname, './src/partials/header.html'),
-        location: 'header',
+        path: path.join(__dirname, './src/partials/footer.html'),
+        location: 'footer',
         template_filename: '*',
         priority: 'replace'
       },
