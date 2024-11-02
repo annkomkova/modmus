@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
   videoOnHover();
   arrowOnHover();
 });
-var cursor = document.querySelector('.cursor');
 function videoOnHover() {
+  var cursor = document.querySelector('.cursor');
   var videoList = document.querySelectorAll('picture img');
   videoList.forEach(function (video) {
     video.addEventListener('mouseover', function () {
@@ -18,6 +18,7 @@ function videoOnHover() {
   });
 }
 function arrowOnHover() {
+  var cursor = document.querySelector('.cursor');
   var linkList = document.querySelectorAll('.videoCard');
   linkList.forEach(function (link) {
     link.addEventListener('mouseover', function () {
