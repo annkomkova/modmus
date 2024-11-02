@@ -1,247 +1,166 @@
-body.index {
+.cover {
+  padding: 0.5rem 2rem;
+  width: 100%;
+  height: 100vh;
+}
+
+.about {
+  width: 40%;
+  margin-top: 1rem;
+  margin-left: 53%;
+}
+
+.about h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.about p {
+  color: var(--muteWhite);
+  font-size: 1rem;
+}
+
+.bg-video {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cover h1 {
+  font-size: 4rem;
+  margin-top: 20vh;
+  text-transform: uppercase;
+  width: 60%;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.gallery {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5rem 1rem;
+  padding: 0 2rem;
+}
+
+.videoCard {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.videoCard img {
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.author {
+  width: 100%;
+  text-align: right;
+  font-size: 11px;
+  line-height: 12px;
+  color: var(--muteWhite);
+  text-transform: uppercase;
+}
+.title {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.1rem;
+  font-weight: bold;
+  position: relative;
+  color: var(--white);
+}
+.arrow {
+  height: 20px;
+  left: 0;
+  position: relative;
+  top: 0;
+  transform-origin: left center;
+  transition: all 0.2s ease-in-out;
+  width: 2rem;
+
+  &.long {
+    transition: all 0.4s ease-in;
+    width: 4rem;
+  }
+
+  &::before {
+    background-image: url('https://makeloveagency.com/img/arrow.svg');
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    width: 12px;
+    filter: invert(1);
+  }
+  &::after {
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-0.5px) translateX(-2px);
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .videoCard {
+    width: 100%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .bg-video {
+    width: 100%;
+  }
+  .about {
+    width: 80%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 779px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .container img,
+  .container video {
+    height: 67vh;
+  }
   .cover {
     padding: 0.5rem 2rem;
     width: 100%;
     height: 100vh;
-
-    h1 {
-      font-size: 4rem;
-      margin-top: 20vh;
-      text-transform: uppercase;
-      width: 60%;
-      line-height: 1;
-      font-weight: 700;
-    }
-
-    .header {
-      display: flex;
-      gap: 6%;
-      border-bottom: 1px solid var(--gray);
-
-      a {
-        color: var(--gray);
-        text-decoration: none;
-        transition: all 0.2s ease;
-      }
-      div {
-        width: 48%;
-      }
-      .logo {
-        font-size: 36px;
-        font-weight: 700;
-      }
-      .organaizer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        p {
-          font-size: 11px;
-          line-height: 12px;
-          text-transform: uppercase;
-          color: var(--muteWhite);
-        }
-      }
-    }
-    .main {
-      .bg-video {
-        width: 50%;
-        height: 100%;
-        overflow: hidden;
-      }
-
-      .about {
-        width: 40%;
-        margin-top: 1rem;
-        margin-left: 53%;
-
-        h2 {
-          font-size: 1.5rem;
-          font-weight: 700;
-          margin-bottom: 1rem;
-        }
-
-        p {
-          color: var(--muteWhite);
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-
-  .gallery {
-    width: 100%;
-
-    .container {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 5rem 1rem;
-      padding: 0 2rem;
-
-      .videoCard {
-        width: 49%;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        text-decoration: none;
-
-        img {
-          width: 100%;
-          position: relative;
-          object-fit: cover;
-          transform: scale(1);
-          transition: all 0.3s ease-in-out;
-          &:hover {
-            transform: scale(1.02);
-          }
-        }
-
-        .author {
-          width: 100%;
-          text-align: right;
-          font-size: 11px;
-          line-height: 12px;
-          color: var(--muteWhite);
-          text-transform: uppercase;
-        }
-        .title {
-          display: flex;
-          gap: 1rem;
-          font-size: 1.3rem;
-          line-height: 1.1rem;
-          font-weight: bold;
-          position: relative;
-          color: var(--white);
-
-          .arrow {
-            height: 20px;
-            left: 0;
-            position: relative;
-            top: 0;
-            transform-origin: left center;
-            transition: all 0.2s ease-in-out;
-            width: 2rem;
-
-            &.long {
-              transition: all 0.4s ease-in;
-              width: 4rem;
-            }
-
-            &::before {
-              background-image: url('https://makeloveagency.com/img/arrow.svg');
-              background-position: 100%;
-              background-repeat: no-repeat;
-              background-size: contain;
-              content: '';
-              display: block;
-              height: 20px;
-              position: absolute;
-              right: 0;
-              top: 0;
-              transition: all 0.5s ease-in-out;
-              width: 12px;
-              filter: invert(1);
-            }
-            &::after {
-              background: var(--white);
-              content: '';
-              display: block;
-              height: 2px;
-              left: 0;
-              position: absolute;
-              top: 50%;
-              transform: translateY(-0.5px) translateX(-2px);
-              width: 100%;
-            }
-          }
-
-          /* svg {
-            position: absolute;
-            left: -0.03125rem;
-            top: 0.003125rem;
-          } */
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 1023px) {
-    .gallery {
-      .container {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-
-        .videoCard {
-          width: 100%;
-        }
-      }
-    }
-    .cover {
-      .main {
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
-
-        .bg-video {
-          width: 100%;
-        }
-        .about {
-          width: 80%;
-          margin: 0;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 779px) {
-    .gallery {
-      .container {
-        padding: 0.5rem;
-
-        img,
-        video {
-          height: 67vh;
-        }
-      }
-    }
-    .cover {
-      padding: 0.5rem 2rem;
-      background-color: var(--black);
-      color: var(--white);
-      width: 100%;
-      height: 100vh;
-
-      /* h1 {
-        font-size: 2.5rem;
-        width: 80%;
-        margin-bottom: 2rem;
-      } */
-
-      .header {
-        display: flex;
-
-        div {
-          width: 100%;
-        }
-        .logo {
-          font-size: 16px;
-        }
-        .organaizer {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-
-          p {
-            font-size: 11px;
-            line-height: 12px;
-            text-transform: uppercase;
-            color: var(--muteWhite);
-          }
-        }
-      }
-    }
   }
 }
