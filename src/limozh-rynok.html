@@ -10,10 +10,22 @@
     <div class="cursor"></div>
 
     <div class="main">
+      <div class="video">
+        <picture>
+          <source media="(max-width: 779px)" srcset="gif/vertical/limoge.gif" />
+          <source
+            media="(min-width: 780px)"
+            srcset="gif/horizontal/limoge.gif"
+          />
+          <img src="gif/horizontal/limoge.gif" />
+        </picture>
+      </div>
+
       <h1>
         Limoges. Le marché. La grande nouvelle (с фр. — «Лимож. Рынок. Большая
         новость»)
       </h1>
+
       <div class="info">
         <div class="infoText">
           Вдохновением для плаката послужила шумная и суматошная атмосфера
@@ -34,6 +46,7 @@
           </div>
         </div>
       </div>
+
       <div class="audio-player">
         <audio src="music/limoge.mp3" type="audio/mpeg"></audio>
         <div class="controls">
@@ -58,27 +71,7 @@
           </button>
         </div>
       </div>
-      <div class="video">
-        <picture>
-          <source media="(max-width: 779px)" srcset="gif/vertical/limoge.gif" />
-          <source
-            media="(min-width: 780px)"
-            srcset="gif/horizontal/limoge.gif"
-          />
-          <img src="gif/horizontal/limoge.gif" />
-        </picture>
-        <!-- <video
-          preload
-          muted
-          autoplay
-          loop
-          poster="images/horizontal/limoge.webp"
-        >
-          <source src="video/limoge_hor.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает встроенные видео :(
-        </video> -->
-      </div>
     </div>
-    <header></header>
+    <footer></footer>
   </body>
 </html>

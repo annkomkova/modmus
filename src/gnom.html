@@ -10,7 +10,16 @@
     <div class="cursor"></div>
 
     <div class="main">
+      <div class="video">
+        <picture>
+          <source media="(max-width: 779px)" srcset="gif/vertical/gnom.gif" />
+          <source media="(min-width: 780px)" srcset="gif/horizontal/gnom.gif" />
+          <img src="gif/horizontal/gnom.gif" />
+        </picture>
+      </div>
+
       <h1>Gnomus (с лат. — «Гном»)</h1>
+
       <div class="info">
         <div class="infoText">
           Плакат вдохновлён динамичной пьесой «Gnomus» из цикла «Картинки с
@@ -29,6 +38,7 @@
           </div>
         </div>
       </div>
+
       <div class="audio-player">
         <audio src="music/gnom.mp3" type="audio/mpeg"></audio>
         <div class="controls">
@@ -53,24 +63,7 @@
           </button>
         </div>
       </div>
-      <div class="video">
-        <picture>
-          <source media="(max-width: 779px)" srcset="gif/vertical/gnom.gif" />
-          <source media="(min-width: 780px)" srcset="gif/horizontal/gnom.gif" />
-          <img src="gif/horizontal/gnom.gif" />
-        </picture>
-        <!-- <video
-          preload
-          muted
-          autoplay
-          loop
-          poster="images/horizontal/GnomusHorizontal.webp"
-        >
-          <source src="video/gnom_hor.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает встроенные видео :(
-        </video> -->
-      </div>
     </div>
-    <header></header>
+    <footer></footer>
   </body>
 </html>

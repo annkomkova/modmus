@@ -10,7 +10,22 @@
     <div class="cursor"></div>
 
     <div class="main">
+      <div class="video">
+        <picture>
+          <source
+            media="(max-width: 779px)"
+            srcset="gif/vertical/baba-yaga.gif"
+          />
+          <source
+            media="(min-width: 780px)"
+            srcset="gif/horizontal/baba-yaga.gif"
+          />
+          <img src="gif/horizontal/baba-yaga.gif" />
+        </picture>
+      </div>
+
       <h1>Избушка на курьих ножках</h1>
+
       <div class="info">
         <div class="infoText">
           Плакат вдохновлён быстрой мелодией «Избушки на курьих ножках», похожей
@@ -54,31 +69,7 @@
           </button>
         </div>
       </div>
-
-      <div class="video">
-        <picture>
-          <source
-            media="(max-width: 779px)"
-            srcset="gif/vertical/baba-yaga.gif"
-          />
-          <source
-            media="(min-width: 780px)"
-            srcset="gif/horizontal/baba-yaga.gif"
-          />
-          <img src="gif/horizontal/baba-yaga.gif" />
-        </picture>
-        <!-- <video
-          preload
-          muted
-          autoplay
-          loop
-          poster="images/horizontal/Baba-Yaga(horizontal)-01.webp"
-        >
-          <source src="video/izbushka_hor.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает встроенные видео :(
-        </video> -->
-      </div>
     </div>
-    <header></header>
+    <footer></footer>
   </body>
 </html>
