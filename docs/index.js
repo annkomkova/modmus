@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 var cursor = document.querySelector('.cursor');
 function videoOnHover() {
-  var videoList = document.querySelectorAll('video');
+  var videoList = document.querySelectorAll('picture img');
   videoList.forEach(function (video) {
     video.addEventListener('mouseover', function () {
-      video.pause();
+      video.classList.add('hover');
       cursor.classList.add('hover');
     });
     video.addEventListener('mouseout', function () {
-      video.play();
+      video.classList.remove('hover');
       cursor.classList.remove('hover');
     });
   });
